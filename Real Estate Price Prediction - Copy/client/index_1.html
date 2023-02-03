@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bengaluru House Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="script1.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="img"></div>
+<div class="flexContainer">
+<div class="sidebar">
+
+	<form class="form">
+		<h2 class="sqft">Area in Sq. ft</h2>
+		<input class="area"  type="number" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+		<h2 class="bhk">BHK</h2>
+		<div class="switch-field">
+			<input type="radio" id="radio-bhk-1" name="uiBHK" value="1" checked/>
+			<label for="radio-bhk-1">1</label>
+			<input type="radio" id="radio-bhk-2" name="uiBHK" value="2"/>
+			<label for="radio-bhk-2">2</label>
+			<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+			<label for="radio-bhk-3">3</label>
+			<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+			<label for="radio-bhk-4">4</label>
+			<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+			<label for="radio-bhk-5">5</label>
+		</div>
+		
+	
+	  
+	
+	
+	
+	<h2 class="resale">Resale</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-resale-0" name="uiResale" value="0" checked/>
+		<label for="radio-resale-0">0</label>
+		<input type="radio" id="radio-resale-1" name="uiResale" value="1"/>
+		<label for="radio-resale-1">1</label>
+	</div>
+	
+	<h2 class="pool">Pool</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-pool-0" name="uiPool" value="0" checked/>
+		<label for="radio-pool-0">0</label>
+		<input type="radio" id="radio-pool-1" name="uiPool" value="1"/>
+		<label for="radio-pool-1">1</label>
+	</div>
+	
+	<h2 class="jog">Jog Track</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-jog-0" name="uiJog" value="0" checked/>
+		<label for="radio-jog-0">0</label>
+		<input type="radio" id="radio-jog-1" name="uiJog" value="1"/>
+		<label for="radio-jog-1">1</label>
+	</div>
+	
+	<p>Select City</p>
+	<select class="location" name="" id="uiLocations">
+		<option value="" disabled="disabled" selected="selected">Select Location</option>
+			<option>Bengaluru</option>
+			<option>Hydrabad</option>
+			<option>Chennai</option>
+	  </select>
+	  
+	<p>Select Area</p>
+	<select class="location" name="" id="uiLocations">
+		<option value="" disabled="disabled" selected="selected">Select Location</option>
+			<option>billekahalli</option>
+			<option>whitefield</option>
+			<option>Kormangala</option>
+	  </select>
+		<button class="submit" onclick="onClickedEstimatePrice()" type="button">ESTIMATE</button>
+		<!-- <div id="uiEstimatedPrice" class="result">	<h2></h2> </div> -->
+	
+		<div class="loginbutton">
+			<a href="login.html">Login</a></div>
+</div>
+<div class="content">
+	<h1 class="title">Bengaluru House Price Prediction</h1>
+
+	<div class="imagecontainer">
+<h2>Distribution of the Target Variable</h2>
+<img class="image" src="first.jpg" height="500px" width="100%">
+</div>
+
+<div class="imagecontainer">
+<h2>Distribution of the Rediduals</h2>
+<img class="image" src="second.jpg" height="500px" width="100%">
+</div>
+</div>
+</div>
+</body>
+</form>
+</html>
