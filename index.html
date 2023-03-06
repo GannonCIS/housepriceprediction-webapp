@@ -5,8 +5,8 @@
 	<title>Bengaluru House Price Prediction</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-	<script src="url_for('static','/static/script.js')"></script>
-	<link rel="stylesheet" type="text/css" href="url_for('static','/static/styles.css')">
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 
 </head>
 
@@ -15,7 +15,7 @@
 	<h1 class="title"> <span id="titleid"> House Price prediction </span></h1>
 
 	<div id="myDIV" class="myDIV">
-		<div class="content">
+		<div>
 			Welcome to our property price prediction tool! This tool is designed to help you estimate the price of a
 			property based on a few key factors.
 			<br> <br>
@@ -52,6 +52,18 @@
 		<div class="sidebar">
 
 			<h1 class="form-title"> Enter Details for House prediction </h1>
+			<div class="top-buttons-container">
+
+				<!-- <div class="info-button">
+					<img class="info-button-image" src="{{ url_for('static', filename='info.png') }}"  />
+					<button type="button" onclick="infoAlertHiddenFunction()" class="info-text">Help</button>
+				</div> -->
+				<div class="info-button">
+					<img class="info-button-image" src="info.png" />
+					<button type="button" onclick="infoAlertHiddenFunction()" class="info-text">Help</button>
+				</div>
+				<div><a href="{{url_for('logout')}}">Logout</a></div>
+			</div>
 			<br>
 			<form class="form">
 				<h2 class="features">Area in Sq. ft
@@ -142,7 +154,7 @@
 				<button id="graphId" value=4 class="submit" onclick="onShowGraph()" type="button"> Show Graph
 				</button>
 
-				<div class="buttons-container">
+				<!-- <div class="buttons-container">
 
 					<div class="loginbutton">
 						<a href="login"> Login </a>
@@ -151,7 +163,7 @@
 						<button type="button" onclick="infoAlertHiddenFunction()" class="info-text">Help</button>
 					</div>
 
-				</div>
+				</div> -->
 				</br>
 				</br>
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+
+<body>
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+                <h1 class="title">Indian House Price Prediction</h1>
+
+            </div>
+        </div>
+
+
+        <form class="right"  action="{{ url_for('login')}}" method="post">
+            <h2>Enter Login Details</h2>
+
+            <div class="inputs">
+                <input type="email" placeholder="Email" name="email">
+                <br>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <br><br>
+            <p style="color:red;font-size: small;"> {{error}} {% if verify == True %}<a href="{{url_for('verify')}}">Verify</a>{% endif %}</p>
+
+            <div>
+                <a href="{{url_for('forgot')}}">Forget password?</a>
+            </div>
+            <div>
+                <p>Don't have an account?</p> <a href="{{url_for('register')}}">Register</a>
+            </div>
+            <br>
+
+            <!-- <a class="button" href="index.html">Login</a> -->
+            <input class="button" type="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+</form>
+
+</html>
