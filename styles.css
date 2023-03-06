@@ -1,0 +1,334 @@
+body,
+html {
+  height: 100%;
+}
+
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.form-title {
+  
+  font-size: 25px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+
+input[type="number"],
+select option {
+  background-color: white;
+  color: black;
+}
+
+.sqft,
+.bhk,
+.resale,
+.jog,
+.pool,
+
+.loc {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 24px;
+  justify-content: center;
+}
+
+.switch-field {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 36px;
+    overflow: hidden;
+     /* This line aligns the elements to the center */
+  }
+  
+
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: lightblue;
+  color: black;
+  box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.form {
+  max-width: 270px;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  line-height: 1.625;
+  margin: 8px auto;
+  padding-left: 16px;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+
+
+.area {
+  
+  justify-content: center;
+  margin: 0 auto; /* add this line */
+  text-align: center; /* add this line */
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  outline: 0;
+  width: 76%;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.location {
+  /* text-indent: 30%; */
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%;
+  margin-left: 10px;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+.location:after {
+  transition: 0.2s;
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.submit {
+  margin-top: 20px;
+  width: 76%;
+  color: rgb(0, 0, 0);
+  border: 2px solid lightblue;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 lightblue;
+  transition: ease-out 0.4s;
+}
+
+.submit:hover {
+  box-shadow: inset 400px 0 0 0 lightblue;
+}
+
+.result {
+  background: lightblue;
+  color: white;
+  width: 76%;
+  border: 0;
+  margin: 25px 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 35px;
+  text-align: center;
+}
+.resultshow {
+
+  font-size: 15px;
+}
+
+
+.flexContainer {
+  display: flex;
+  background-color: #F1F2F6;
+  justify-content: center;
+}
+
+.sidebar {
+  /* width: 20%; */
+  padding-top: 50px;
+  background-color: #F1F2F6;
+}
+.content {
+  padding-left: 5%;
+}
+
+.image {
+  object-fit: contain;
+}
+.imagecontainer {
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+
+
+
+ .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: rgb(158, 156, 156);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 25px;
+  margin-left: 25px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.features:hover .tooltiptext {
+  visibility: visible;
+}
+
+.description{
+  width: 60%;
+  text-align: center;
+  font-size: 20px;
+}
+.top-buttons-container {
+  margin-top: 25px;
+  width: 100%;
+  position: relative;
+}
+
+.buttons-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.loginbutton {
+  background-color: #F1F2F6;
+}
+.info-button{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.info-button-image {
+  display: inline-block;
+  width: 35px;
+}
+
+.info-text {
+  text-align: center;
+  font-size: larger;
+}
+
+.pop-alert-container {
+  display: flex;
+  justify-content: center;
+}
+.pop-alert {
+  justify-content: end;
+}
+.pop-alert-button-container{
+  display: flex;
+  justify-content: end;
+}
+.pop-alert-button {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* #myDIV {
+  width: 50%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  font-size: larger;
+} */
+
+.myDIV {
+  display: none;
+  z-index: 100;
+  background-color: rgb(210, 237, 248);
+  font-size: 20px;
+  position: fixed;
+  width: 40%;
+  text-align: left;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, 0);
+  height: 70vh;
+  overflow-y: scroll;
+}
+.content {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.close-Alert{
+font-size: 24px;
+font-weight: 700;
+cursor: pointer;
+text-align: right;
+color: red;
+}
+
+.highlight-step{
+font-size: 24px;
+font-weight: 700;
+}

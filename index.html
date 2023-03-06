@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bengaluru House Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<script src="url_for('static','/static/script.js')"></script>
+	<link rel="stylesheet" type="text/css" href="url_for('static','/static/styles.css')">
+
+</head>
+
+<body>
+	<div class="img"></div>
+	<h1 class="title"> <span id="titleid"> House Price prediction </span></h1>
+
+	<div id="myDIV" class="myDIV">
+		<div class="content">
+			Welcome to our property price prediction tool! This tool is designed to help you estimate the price of a
+			property based on a few key factors.
+			<br> <br>
+			Here's how to use it:
+			<br> <br>
+			<span class="highlight-step">Step 1: </span> Choose the location The first step is to choose the location of
+			the property you're interested in.
+			You can choose from one of four locations: Bangalore, Hydrabad, Mumbai, or Delhi.
+			<br> <br>
+			<span class="highlight-step">Step 2: </span> Enter the property details Next, you'll need to enter some
+			details about the property.
+			Specifically, you'll need to enter the following information:
+			<br><br>
+			Square footage: This is the total area of the property in square feet.
+			<br><br>
+			Number of bedrooms This is the total number of bedrooms in the property.
+			<br><br>
+			Resale status: Is the property new, or is it a resale? Select "New" or "Resale" accordingly.
+			<br><br>
+			Pool: Does the propert have a pool? Select "Yes" or "No" accordingly.
+			<br><br>
+			Jogging track: Does the property have a jogging track? Select "Yes" or "No" accordingly.
+			<br> <br>
+			<span class="highlight-step">Step 3: </span> Get your estimate <br>
+			Once you've entered all the necessary information, simply click "Get Estimate" to get an estimate of the
+			price of the propert based on the details you provided.
+		</div>
+		<br><br>
+		<div type="button" onclick="infoAlertHiddenFunction()" class="close-Alert">Close this message</div>
+		<br>
+	</div>
+
+	<div class="flexContainer">
+		<div class="sidebar">
+
+			<h1 class="form-title"> Enter Details for House prediction </h1>
+			<br>
+			<form class="form">
+				<h2 class="features">Area in Sq. ft
+
+
+					<span class="tooltiptext"> A unit of area measurement equal to a square measuring one foot on
+						each side; 0.0929 square meters. </span>
+
+				</h2>
+				<input class="area" type="number" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+				<h2 class="features">BHK
+					<span class="tooltiptext"> Initialism of bedroom(s), hall, and kitchen. </span>
+				</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-bhk-1" name="uiBHK" value="1" checked />
+					<label for="radio-bhk-1">1</label>
+					<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" />
+					<label for="radio-bhk-2">2</label>
+					<input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+					<label for="radio-bhk-3">3</label>
+					<input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+					<label for="radio-bhk-4">4</label>
+					<input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+					<label for="radio-bhk-5">5</label>
+				</div>
+
+
+
+				<h2 class="features">Resale
+					<span class="tooltiptext"> The sale of a thing previously bought. </span>
+				</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-resale-0" name="uiResale" value="0" checked />
+					<label for="radio-resale-0">0</label>
+					<input type="radio" id="radio-resale-1" name="uiResale" value="1" />
+					<label for="radio-resale-1">1</label>
+				</div>
+
+				<h2 class="features">Pool
+
+					<span class="tooltiptext"> An artificial pool for swimming in. </span>
+				</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-pool-0" name="uiPool" value="0" checked />
+					<label for="radio-pool-0">0</label>
+					<input type="radio" id="radio-pool-1" name="uiPool" value="1" />
+					<label for="radio-pool-1">1</label>
+				</div>
+
+				<h2 class="features">Jog Track
+					<span class="tooltiptext"> A track for running foot races. </span>
+				</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-jog-0" name="uiJog" value="0" checked />
+					<label for="radio-jog-0">0</label>
+					<input type="radio" id="radio-jog-1" name="uiJog" value="1" />
+					<label for="radio-jog-1">1</label>
+				</div>
+
+				<h2 class="features">Select City
+					<span class="tooltiptext"> Select City </span>
+				</h2>
+				<div class="flexContainer">
+					<select class="location" name="" id="uiLocations" onchange="change(this.value)">
+						<option value="Bangalore" id="Bangalore">Bangalore</option>
+						<option id="Delhi" value="Delhi">Delhi</option>
+						<option id="Hydrabad" value="Hyderabad">Hyderabad</option>
+						<option id="Mumbai" value="Mumbai">Mumbai</option>
+					</select>
+				</div>
+
+				<h2 class="features">Select Area
+					<span class="tooltiptext"> Select Area </span>
+				</h2>
+				<select class="location" name="" id="uiLocations" onchange="changeArea(this.value)">
+					<!-- <option value="" disabled="disabled" selected="selected">Select Location</option> -->
+					<option id="opt1" value="kormangla">Kormangla</option>
+					<option id="opt2" value="whitefeild">Whitefeild</option>
+					<option id="opt3" value="indranagar">Indranagar</option>
+				</select>
+
+				<button class="submit" onclick="onClickedEstimatePrice()" type="button"> Predict price </button>
+				<h2 class="features">Price</h2>
+				<div id="uiEstimatedPrice" class="result">
+					<h2 class="resultshow">EstimatedPrice: </h2>
+				</div>
+
+				<button id="graphId" value=4 class="submit" onclick="onShowGraph()" type="button"> Show Graph
+				</button>
+
+				<div class="buttons-container">
+
+					<div class="loginbutton">
+						<a href="login"> Login </a>
+					</div>
+					<div class="info-button"><img src="info.png" width="15%" />
+						<button type="button" onclick="infoAlertHiddenFunction()" class="info-text">Help</button>
+					</div>
+
+				</div>
+				</br>
+				</br>
+
+		</div>
+		<!-- <div class="content">
+						<h1 class="title"> <span id="titleid"> Select cities and areas for prediction </span></h1>
+
+						<div class="imagecontainer">
+					<h2>Distribution of the Target Variable</h2>
+					<img class="image" src="/static/first.jpg" id="img1" height="500px" width="100%">
+					</div>
+
+					<div class="imagecontainer">
+					<h2>Distribution of the Rediduals</h2>
+					<img class="image" src="/static/second.jpg" id="img2" height="500px" width="100%">
+					</div>
+					</div> -->
+
+
+	</div>
+
+
+</body>
+</form>
+
+</html>
